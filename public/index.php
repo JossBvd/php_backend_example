@@ -47,7 +47,6 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>
             <label>Mot de passe : <input type="password" name="password" required></label><br>
             <button type="submit" name="login">Se connecter</button>
         </form>
-        <p><?php echo $_ENV['MYVAR'];?></p>
     </body>
 
     </html>
