@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Si l'URL commence par /api, redirige vers api.php
+RewriteRule ^api(?:/(.*))?$ /api.php [QSA,L]
+
+# Ne pas rediriger les requêtes vers /public/
+RewriteCond %{REQUEST_URI} !^/public/
+# Ne pas rediriger les requêtes vers /api.php (appel direct)
+RewriteCond %{REQUEST_URI} !^/api\.php$
+# Ne pas rediriger les requêtes vers /api (déjà géré ci-dessus)
+RewriteCond %{REQUEST_URI} !^/api(/|$)
+
+# Rediriger tout le reste vers /public/
+RewriteRule ^(.*)$ /public/$1 [L]
