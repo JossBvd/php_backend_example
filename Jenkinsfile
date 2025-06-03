@@ -22,7 +22,7 @@ pipeline {
             agent { label 'agent-php' }
             steps {
                 sh """
-                    sshpass -p "$SSH_PASS" ssh -o StrictHostKeyChecking=no jocelyn1@ssh-jocelyn1.alwaysdata.net '
+                    sshpass -p n8664f6y ssh -o StrictHostKeyChecking=no jocelyn1@ssh-jocelyn1.alwaysdata.net '
                         cd ~/www && composer install --no-dev &&
                         echo "HOST=mysql-jocelyn1.alwaysdata.net" > .env &&
                         echo "DBNAME=jocelyn1_db" >> .env &&
