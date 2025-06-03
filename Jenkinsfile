@@ -26,8 +26,8 @@ pipeline {
                         cd ~/www && composer install --no-dev &&
                         echo "HOST=mysql-jocelyn1.alwaysdata.net" > .env &&
                         echo "DBNAME=jocelyn1_db" >> .env &&
-                        echo "USERNAME=jocelyn1" >> .env &&
-                        echo "PASSWORD=n8664f6y" >> .env
+                        echo "USERNAME=[CHANGE_ME]" >> .env &&
+                        echo "PASSWORD=[CHANGE_ME]" >> .env
                     '
                 """
             }
